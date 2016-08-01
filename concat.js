@@ -2,6 +2,7 @@
  * concat.js v0.9.5, https://github.com/hoho/concat.js
  * (c) 2013-2014 Marat Abdullin, MIT license
  */
+module.exports = Object.create(window);
 
 (function(window, undefined) {
     // This code is being optimized for size, so some parts of it could be
@@ -326,4 +327,4 @@
             isFunction((val = args[1])) ? val.call(self, item, index, arr) : val
         );
     });
-})(window);
+})(module.exports);
